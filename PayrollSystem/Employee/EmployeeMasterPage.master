@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="EmployeeMasterPage.master.cs" Inherits="EmployeeMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table style="font-family:Arial">
+    <tr>
+        <td colspan="2" style="width:1350px; height:80px; background-color:#3399FF; 
+            text-align:center">
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/img/plogo700.png" />
+        </td>
+    </tr>
+    <tr>        
+      <td style="background-color:#66FFFF; " class="style1">
+            
+            <asp:Label ID="Welcome" runat="server" Text="Welcome to System" 
+                BackColor="#66FF99" Font-Bold="True" Font-Names="Acme" Height="64px" 
+                style="font-weight: 700; text-align: center" Width="147px" 
+                Font-Size="Large"></asp:Label>
+            <br />
+            
+            <asp:Button ID="AcButton" runat="server" Height="42px" style="font-weight: 700" Text="My Account" 
+                Width="148px" CausesValidation="False" 
+                PostBackUrl="~/Employee/MyAccount.aspx"/>
+            <br />
+            
+            <asp:Button ID="ALButton" runat="server" Height="42px" 
+                PostBackUrl="~/Registration.aspx" style="font-weight: 700" Text="Apply Leave" 
+                Width="148px" CausesValidation="False" />
+            <br />
+            
+            <asp:Button ID="LRButton" runat="server" Height="42px" style="font-weight: 700" Text="Leave Report" 
+                Width="148px" CausesValidation="False"/>
+            <br />
+            
+            <asp:Button ID="SRButton" runat="server" Height="42px" style="font-weight: 700" Text="Salary Report" 
+                Width="148px" CausesValidation="False"/>
+            <br />
+            
+            <asp:Button ID="CPButton" runat="server" Height="42px" style="font-weight: 700" Text="Change Password" 
+                Width="148px" CausesValidation="False"/>
+            <br />
+            
+            <asp:Button ID="LogoutButton" runat="server" Height="42px" style="font-weight: 700" Text="LogOut" 
+                Width="148px" CausesValidation="False"/>
+             <br />
+             <br />
+             <br />
+             <asp:Image ID="Image2" runat="server" Height="141px" 
+                        ImageUrl="~/img/accounting.png" Width="148px" />
+            
+        </td>
+
+        <td style="height:500px; background-color:#9999FF; width:1250px">  
+           <div>
+                <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+        
+                </asp:ContentPlaceHolder>
+           </div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="background-color:#3399FF; text-align:center">
+            <b>Website Footer</b>
+        </td>
+    </tr>
+</table>
+    </form>
+</body>
+</html>
+

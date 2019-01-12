@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table style="font-family:Arial">
+    <tr>
+        <td colspan="2" style="width:1350px; height:80px; background-color:#3399FF; 
+            text-align:center">
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/img/plogo700.png" />
+        </td>
+    </tr>
+    <tr>
+    <td style="height:500px; background-color:#9999FF; width:200px">
+     <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" 
+        Font-Size="0.8em" PathSeparator=" : ">
+        <CurrentNodeStyle ForeColor="#333333" />
+        <NodeStyle Font-Bold="True" ForeColor="#990000" />
+        <PathSeparatorStyle Font-Bold="True" ForeColor="#990000" />
+        <RootNodeStyle Font-Bold="True" ForeColor="#FF8000" />
+        </asp:SiteMapPath>
+    
+        <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1">
+        </asp:TreeView>
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+
+        <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" 
+            Height="88px" Width="145px">
+        </asp:Menu>
+
+    </td>
+        
+        <td style="height:500px; background-color:#9999FF; width:1150px">  
+           <div>
+                <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+        
+                </asp:ContentPlaceHolder>
+           </div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="background-color:#3399FF; text-align:center">
+            <b>Website Footer</b>
+        </td>
+    </tr>
+</table>
+    </form>
+</body>
+</html>
